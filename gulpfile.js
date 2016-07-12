@@ -8,8 +8,7 @@ var root_url = '';
 
 // Compile JS.
 gulp.task('compile', function() {
-	return gulp.src(prefixSourceFiles(groupId, 'js'))
-		.pipe(gulp.dest('./'))
+	return gulp.src(root_url)
 		.pipe(rename({suffix: '.min'}))
 		.pipe(uglify())
 		.pipe(gulp.dest(root_url));
